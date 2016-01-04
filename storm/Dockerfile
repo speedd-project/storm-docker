@@ -2,6 +2,8 @@ FROM wurstmeister/base
 
 MAINTAINER Wurstmeister 
 
+RUN echo 'root:speedd' | chpasswd
+
 RUN wget -q -O - http://mirrors.sonic.net/apache/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz | tar -xzf - -C /opt
 
 ENV STORM_HOME /opt/apache-storm-0.9.4
